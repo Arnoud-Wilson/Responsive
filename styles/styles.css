@@ -8,6 +8,14 @@ Table of Contents:
     4. Media Queries
 ////////////////////////////////////////////////////////////////////////*/
 
+:root {
+    --mobile-bg-color: #F9C48B;
+    --tab-bg-color: #F69051;
+    --desktop-bg-color: #F26D40;
+    --section-bg-color: #FDEFEC;
+}
+
+
 /*////////////////////////
     1. Global Styles
 ////////////////////////*/
@@ -21,7 +29,44 @@ body {
     2. Typography
 ////////////////////////*/
 
+body {
+    font-size: 12px;
+    background-color: var(--mobile-bg-color);
+}
 
+section {
+    background-color: var(--section-bg-color);
+    padding: 1.4rem;
+    margin: 1.0rem;
+    border-radius: 5px;
+}
+
+img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+@media screen and (min-width:768px) {
+    body {
+        font-size: 1.1rem;
+        background-color: var(--tab-bg-color);
+    }
+
+    section {
+        margin: 1.1rem;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    body {
+        font-size: 1.2rem;
+        background-color: var(--desktop-bg-color);
+    }
+
+    section {
+        margin: 1.2rem;
+    }
+}
 
 /*////////////////////////
     3. Areas
